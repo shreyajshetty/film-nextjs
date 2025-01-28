@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../globals.css";
-import Header from "../header/page";
-import Footer from "../footer/page";
+import Header from "./header/page";
+import Footer from "./footer/page";
 import { SearchContextProvider } from "@/components/search";
 
 const inter = Inter({ subsets: ["latin"] });
