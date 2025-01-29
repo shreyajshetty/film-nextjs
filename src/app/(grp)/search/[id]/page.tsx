@@ -3,6 +3,7 @@ import CardHome from "@/components/CardHome";
 import CardDetails from "@/components/cardDetails";
 import { AddIcon, InfoOutlineIcon, StarIcon } from "@chakra-ui/icons";
 import { PlayIcon } from "@heroicons/react/16/solid";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -71,11 +72,11 @@ export default function MoviePage({
             {movieDetails.Year} {"."} {movieDetails.Runtime}
           </div>
           <div className="mt-2 flex flex-row ml-3">
-            <img
+            <Image
               src={movieDetails.Poster}
               alt={movieDetails.Title}
-              width="250px"
-              height="450px"
+              width={250}
+              height={450}
             />
 
             <div className=" ml-3 mt-2 flex flex-col flex-wrap">

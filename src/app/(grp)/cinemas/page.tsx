@@ -12,6 +12,7 @@ import { Tooltip } from "@chakra-ui/react";
 import { useSearch } from "@/components/search";
 import { useRouter } from "next/navigation";
 import { Modalstar } from "@/components/modalstar";
+import Image from "next/image";
 export default function Movies() {
   const [isModalOpen, setModalOpen] = useState(false);
   const [isStarModalOpen, setStarModalOpen] = useState(false);
@@ -67,11 +68,11 @@ export default function Movies() {
           >
             <div className="flex flex-row ">
               <div className=" ">
-                <img
+                <Image
                   src={film.Poster}
                   alt={film.Title}
-                  width="100px"
-                  height="450px"
+                  width={100}
+                  height={450}
                 />
               </div>
               <div className="flex flex-col">

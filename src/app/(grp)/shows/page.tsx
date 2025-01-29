@@ -11,6 +11,7 @@ import { Tooltip } from "@chakra-ui/react";
 import { useSearch, SearchContextProvider } from "@/components/search";
 import { useRouter } from "next/navigation";
 import { Modalstar } from "@/components/modalstar";
+import Image from "next/image";
 
 export default function Shows() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -72,11 +73,11 @@ export default function Shows() {
           >
             <div className="flex flex-row ">
               <div className=" ">
-                <img
+                <Image
                   src={show.Poster}
                   alt={show.Title}
-                  width="100px"
-                  height="450px"
+                  width={100}
+                  height={450}
                 />
               </div>
               <div className="flex flex-col">

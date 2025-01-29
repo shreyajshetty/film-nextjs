@@ -3,6 +3,7 @@ import CardHome from "@/components/CardHome";
 import CardMovie from "@/components/CardMovies";
 import CardSearch from "@/components/CardSearch";
 import { useSearch } from "@/components/search";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 export interface SearchResult {
@@ -52,14 +53,21 @@ export default function SearchPage() {
           <CardSearch key={index}>
             <div onClick={() => handleSearch(movie)}>
               <div className="flex flex-row">
-                <div>
-                  <img
+                <div
+                  style={{
+                    position: "relative",
+                    width: "100px",
+                    height: "auto",
+                  }}
+                >
+                  <Image
                     src={movie.Poster}
                     alt={movie.Title}
-                    width="100px"
-                    height="auto"
+                    layout="fill"
+                    objectFit="contain"
                   />
                 </div>
+
                 <div className="flex flex-col">
                   <h3 className="text-lg mt-2 font-semibold ml-3">
                     {movie.Title}
