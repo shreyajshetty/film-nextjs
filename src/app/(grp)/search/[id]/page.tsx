@@ -35,7 +35,7 @@ export default function MoviePage({
   };
   useEffect(() => {
     fetchMovieDetails(id);
-  }, []);
+  }, [id]);
 
   const fetchMovieDetails = async (imdbID: string) => {
     try {
